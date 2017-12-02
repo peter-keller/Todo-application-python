@@ -20,6 +20,17 @@ def save_to_file(argument):
         print(todo_file + " not found")
 
 
+def print_data():
+    try:
+        with open(todo_file, 'r') as file:
+            return file.read()
+    except FileNotFoundError:
+        print(todo_file + " not found")
+
+
+print(print_data())
+
+
 def add():
     pass
 
