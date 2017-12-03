@@ -32,7 +32,7 @@ print(list_tasks())
 
 
 def add():
-    pass
+    print("something")
 
 
 def remove():
@@ -41,6 +41,12 @@ def remove():
 
 def complete():
     pass
+
+def run():
+    try:
+        controller(add)()
+    except KeyboardInterrupt:
+        pass
 
 def controller(task_name):
     return {
