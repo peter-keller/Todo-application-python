@@ -20,7 +20,7 @@ def save_to_file(argument):
         print(todo_file + " not found")
 
 
-def print_data():
+def list_tasks():
     try:
         with open(todo_file, 'r') as file:
             return file.read()
@@ -28,7 +28,7 @@ def print_data():
         print(todo_file + " not found")
 
 
-print(print_data())
+print(list_tasks())
 
 
 def add():
@@ -42,3 +42,10 @@ def remove():
 def complete():
     pass
 
+def controller(task_name):
+    return {
+        "-a": add,
+        "-r": remove,
+        "-c": complete,
+        "-l": list_tasks
+    }[task_name]
