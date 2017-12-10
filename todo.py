@@ -42,16 +42,14 @@ def remove():
 def complete():
     pass
 
-def run():
-    try:
-        controller(add)()
-    except KeyboardInterrupt:
-        pass
 
-def controller(task_name):
-    return {
-        "-a": add,
+def controller():
+    commands = {
+        "add": add,
         "-r": remove,
         "-c": complete,
         "-l": list_tasks
-    }[task_name]
+    }
+
+
+controller()
