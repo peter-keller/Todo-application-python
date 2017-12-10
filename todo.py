@@ -1,7 +1,7 @@
 import sys
 
-todo_file = "todo_list.txt"
 
+todo_file = "todo_list.txt"
 
 
 def open_file():
@@ -45,11 +45,14 @@ def complete():
 
 def controller():
     commands = {
-        "add": add,
-        "-r": remove,
-        "-c": complete,
-        "-l": list_tasks
+        "-a": add(),
+        "-r": remove(),
+        "-c": complete(),
+        "-l": list_tasks()
     }
+
+
+
 
 
 controller()
